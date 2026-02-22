@@ -17,8 +17,8 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.7.0"),
-    .package(path: "../FlyChatFoundation"),
-    .package(path: "../FlyChatCompression")
+    .package(url: "https://github.com/aiautomationuk/fly-chat-foundation.git", from: "1.0.0"),
+    .package(url: "https://github.com/aiautomationuk/fly-chat-compression.git", from: "1.0.0")
   ],
   targets: [
     .target(
