@@ -1,0 +1,20 @@
+//
+// Copyright © 2019-2020 IZE Ltd. and the project authors
+// Licensed under MIT License
+//
+// See LICENSE.md for license information.
+//
+
+syntax = "proto3";
+
+import "PBUUID.proto";
+
+// `User` is used for defining a user in a simple way.
+message User {
+  
+  // The identifier of the user.
+  PBUUID identifier = 1;
+  
+  // The name of the user.
+  string name = 2;    
+}

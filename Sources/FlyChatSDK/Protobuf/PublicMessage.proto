@@ -1,0 +1,27 @@
+//
+// Copyright © 2019-2020 IZE Ltd. and the project authors
+// Licensed under MIT License
+//
+// See LICENSE.md for license information.
+//
+
+syntax = "proto3";
+
+import "User.proto";
+import "PBUUID.proto";
+
+// `PublicMessage` is used as a message payload, whose `text`
+// field is intended for everyone's eyes. To use it, set its
+// `serializedData()` as the `payload` and `.publicMessage` for
+// `payload_type` of a `Message` instance.
+message PublicMessage {
+  
+  // The identifier of the public message.
+  PBUUID identifier = 1;
+  
+  // The source user of the public message.
+  User source_user = 2;
+  
+  // The text content of the public message.
+  string text = 3;
+}
